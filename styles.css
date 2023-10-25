@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Space Grotesk", sans-serif;
+}
+
+#target {
+	width: 100%;
+	height: 100vh;
+}
+
+.main {
+	background-image: url(/images/bg-main-desktop.png);
+	background-size: 30% 100%;
+	background-repeat: no-repeat;
+	transition: background-size 500ms;
+}
+
+#target .card-con {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	transition: flex-direction 300ms;
+}
+
+#target .card-con .cards {
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+#target .card-con .cards .front {
+	background-image: url(/images/bg-card-front.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 1.5rem;
+	width: 100%;
+	border-radius: 0.7rem;
+}
+
+#target .card-con .cards .front img {
+	width: 5rem;
+}
+
+#target .card-con .cards .front p {
+	text-transform: uppercase;
+}
+
+#target .card-con .cards .front .num {
+	margin-top: 3rem;
+}
+
+#target .card-con .cards .front .id {
+	display: flex;
+	justify-content: space-between;
+	font-size: small;
+}
+
+#target .card-con .cards .back {
+	background-image: url(/images/bg-card-back.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 6rem 3rem;
+	margin-left: 5rem;
+	width: 100%;
+	border-radius: 0.7rem;
+}
+
+#target .card-con .card-input {
+	width: 30%;
+}
+
+#target .card-con .card-input form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+#target .card-con .card-input form label {
+	text-transform: uppercase;
+	font-size: small;
+	margin-bottom: 0.5rem;
+}
+
+#target .card-con .card-input form .date-cvc {
+	display: flex;
+	gap: 3rem;
+}
+
+#target .card-con .card-input form .date-cvc .date .month-year {
+	display: flex;
+	gap: 1rem;
+}
+
+#target .card-con .card-input form .date-cvc .cvc {
+	width: 90%;
+}
+
+#target .card-con .card-input form .btn {
+	background-color: hsl(278, 68%, 11%);
+	border: none;
+	padding: 0.6rem;
+}
+
+#target .card-con .card-input form .btn:active {
+	background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+	scale: 0.95;
+}
+
+#target .card-con .cards .front,
+#target .card-con .cards .back,
+#target .card-con .card-input,
+#target .card-con .thanks {
+	transition: width 500ms;
+}
+
+.valid-feedback,
+.valid-tooltip,
+.was-validated :valid ~ .valid-feedback,
+.was-validated :valid ~ .valid-tooltip,
+.invalid-feedback {
+	display: block;
+}
+
+.form-control {
+	appearance: show;
+}
+
+.form-control.is-random:focus {
+	border-color: hsl(249, 99%, 64%) hsl(278, 94%, 30%) !important;
+	box-shadow: none !important;
+}
+
+.form-control.is-random {
+	border-color: lightgrey !important;
+}
+
+.thanks {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.thanks img {
+	margin-bottom: 2rem;
+}
+
+.thanks a {
+	width: 100%;
+	margin-top: 2rem;
+	text-decoration: none;
+}
+
+.thanks a .btn {
+	width: 100%;
+	background-color: hsl(278, 68%, 11%);
+	border: none;
+	padding: 0.6rem;
+}
+
+.thanks a .btn:active {
+	background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+	scale: 0.95;
+}
+
+.none {
+	display: none;
+}
+
+.attribution {
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+.attribution a {
+	text-decoration: none;
+	color: hsl(278, 94%, 30%);
+}
+
+.attribution a:hover {
+	color: darkred;
+}
+
+.attribution p {
+	font-weight: bold;
+}
+
+@media screen and (max-width: 918px) {
+	.main {
+		background-image: url(./images/bg-main-mobile.png);
+		background-size: 100% 40%;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	#target .card-con {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	#target .card-con .cards {
+		width: 100%;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		margin-top: 1rem;
+	}
+
+	#target .card-con .cards .front {
+		width: 50%;
+		margin-top: -8rem;
+		z-index: 1;
+	}
+
+	#target .card-con .cards .back {
+		width: 50%;
+		margin-left: 8rem;
+		z-index: 0;
+		background-size: contain;
+	}
+
+	#target .card-con .card-input,
+	#target .card-con .thanks {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 648px) {
+	#target .card-con {
+		padding: 0 1rem;
+	}
+
+	#target .card-con .cards {
+		align-items: flex-start;
+	}
+
+	#target .card-con .cards .front {
+		margin-left: 0.6rem;
+	}
+
+	#target .card-con .cards .front,
+	#target .card-con .cards .back {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#target .card-con .card-input {
+		width: 100%;
+	}
+
+	#target .card-con .cards .front {
+		margin-left: 0.6rem;
+	}
+
+	#target .card-con .cards .back {
+		margin-left: 3rem;
+	}
+
+	#target .card-con .cards .front,
+	#target .card-con .cards .back {
+		width: 90%;
+	}
+
+	#target .card-con .thanks {
+		width: 100%;
+	}
+}
