@@ -100,6 +100,9 @@ body {
 	text-transform: uppercase;
 	font-size: small;
 	margin-bottom: 0.5rem;
+	color: hsl(278, 68%, 11%);
+	font-weight: 700;
+	letter-spacing: 0.17rem;
 }
 
 #target .card-con .card-input form .date-cvc {
@@ -205,6 +208,7 @@ body {
 
 .attribution p {
 	font-weight: bold;
+	color: hsl(278, 68%, 11%);
 }
 
 @media screen and (max-width: 918px) {
