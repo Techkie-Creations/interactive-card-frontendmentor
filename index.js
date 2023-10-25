@@ -132,7 +132,7 @@ let App = () => {
 	};
 
 	return (
-		<main className="card-con">
+		<div className="card-con">
 			<div className="cards">
 				<div className="front">
 					<img src="./images/card-logo.svg" alt="card logo" className="logo" />
@@ -259,7 +259,7 @@ let App = () => {
 					<button className="btn btn-primary">Continue</button>
 				</a>
 			</div>
-		</main>
+		</div>
 	);
 };
 
